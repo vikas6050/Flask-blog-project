@@ -31,7 +31,7 @@ class RegistrationForm(FlaskForm):
             raise ValidationError('Your username has been registered already!')
 
 
-class updateUserForm(FlaskForm):
+class UpdateUserForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Email()])
     username = StringField('UserName', validators=[DataRequired()])
     picture = FileField('Update Profile Picture', validators=[FileAllowed(['jpg','png'])])
